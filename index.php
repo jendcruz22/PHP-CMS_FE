@@ -107,7 +107,8 @@ include( 'admin/includes/functions.php' );
       <h2 class="w3-xlarge w3-center">Education</h2>
       <?php
         $query = 'SELECT *
-          FROM education';
+          FROM education
+          ORDER BY fromDate ASC';
         $result = mysqli_query( $connect, $query );
       ?>
       <div class="w3-content">
@@ -144,44 +145,42 @@ include( 'admin/includes/functions.php' );
     </div>
 
     <!-- Projects -->
-    <div id="work" class="w3-padding-32 w3-container">
-      <h2 class="w3-xlarge w3-center">Projects</h2>
-      <?php
+    <h2 class="w3-xlarge w3-center">Projects</h2>
+    <?php
         $query = 'SELECT *
           FROM projects
-          ORDER BY date';
+          ORDER BY date DESC';
         $result = mysqli_query( $connect, $query );
       ?>
-      <div class="publicationCards">
-         <div class="w3-row">
-          <?php while($record = mysqli_fetch_assoc($result)): ?>
-            <div class="w3-col l6 s12">
-               <div class="w3-card-4 w3-margin w3-white">
-                  <div class="w3-container">
-                     <h3>
-                        <b><?php echo $record['title']; ?></b>
-                     </h3>
-                     <h4>
-                        <span class="w3-opacity"><?php echo $record['date']; ?></span>
-                     </h4>
+      <div class="w3-row">
+        <?php while($record = mysqli_fetch_assoc($result)): ?>
+          <div class="w3-col l4 s12">
+            <div class="w3-card-4 w3-margin w3-white">
+              <img src="<?php echo $record['photo']; ?>" alt="Image for article 12" style="width: 100%; height: auto;">
+              <div class="w3-container">
+                  <h3>
+                    <b><?php echo $record['title']; ?></b>
+                  </h3>
+                  <h4>
+                    <span class="w3-opacity"><?php echo $record['date']; ?></span>
+                  </h4>
+              </div>
+              <div class="w3-container">
+                  <p><?php echo $record['content']; ?></p>
+                  <div class="w3-row">
+                    <div class="w3-col m8 s12">
+                        <p>
+                          <button class="w3-button w3-black w3-padding-large w3-margin-top w3-hover-text-blue w3-hover-white"> 
+                              <a id="resumeBtn" href="<?php echo $record['url']; ?>">Read more »</a> 
+                            </button>
+                        </p>
+                    </div>
                   </div>
-                  <div class="w3-container">
-                     <p><?php echo $record['content']; ?></p>
-                     <div class="w3-row">
-                        <div class="w3-col m8 s12">
-                           <p>
-                               <button class="w3-button w3-black w3-padding-large w3-margin-top w3-hover-text-blue w3-hover-white"> 
-                                   <a id="resumeBtn" href="<?php echo $record['url']; ?>">Read more »</a>
-                                </button>
-                            </p>
-                        </div>
-                     </div>
-                  </div>
-               </div>
+              </div>
             </div>
-          <?php endwhile; ?>
-         </div>
-    </div>
+          </div>
+        <?php endwhile; ?>
+      </div>
 
   </body>
 </html>

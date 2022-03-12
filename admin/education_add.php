@@ -17,6 +17,8 @@ if( isset( $_POST['course'] ) )
     $query = 'INSERT INTO education (
         course,
         specialization,
+        institute,
+        location,
         fromDate,
         toDate
       ) VALUES (

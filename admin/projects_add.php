@@ -8,6 +8,7 @@ secure();
 
 include( 'includes/header.php' );
 
+
 if( isset( $_POST['title'] ) )
 {
   
@@ -18,7 +19,6 @@ if( isset( $_POST['title'] ) )
         title,
         content,
         date,
-        type,
         url
       ) VALUES (
          "'.mysqli_real_escape_string( $connect, $_POST['title'] ).'",
@@ -73,9 +73,9 @@ if( isset( $_POST['title'] ) )
   
   <label for="date">Date:</label>
   <input type="date" name="date" id="date">
-  
+
   <br>
-  
+
   <input type="submit" value="Add Project">
   
 </form>
