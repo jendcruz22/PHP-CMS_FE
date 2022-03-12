@@ -1,0 +1,98 @@
+@import url(fontawesome-all.min.css);
+
+body,
+h1, h2, h3, h4, h4, h6 {
+  font-family: "Lato", sans-serif;
+}
+
+.w3-bar,
+h1,
+button {
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.fa-anchor, .fa-coffee {
+	font-size: 200px;
+}
+
+.publicationCards {
+  padding: 200px 36px 30px 36px;
+}
+
+@media screen and (max-width: 600px) {
+    .publicationCards {
+    padding: 0px;
+    margin-top: 170px;
+    }
+}
+
+* {
+	box-sizing: border-box;
+}
+
+/* Float four columns side by side */
+.column {
+	float: left;
+	width: 25%;
+	padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row1,
+.row2,
+.row3,
+.row4,
+.row5 {
+	margin: 0 -5px;
+}
+
+/* Clear floats after the columns */
+.row1:after,
+.row2:after,
+.row3:after,
+.row4:after,
+.row5:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+
+/* Style the counter cards */
+.card {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	padding: 16px;
+	text-align: center;
+	background-color: #f1f1f1;
+	margin: 10px 0px;
+}
+
+#work {
+	padding: 158px 36px 30px 36px;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+	.column {
+		width: 100%;
+		display: block;
+		margin-bottom: 20px;
+	}
+	.card {
+		height: auto;
+	}
+}
+  
+.confidence-container {
+    background-color: red;
+    height: 20px;
+}
+
+.confidence-bar {
+    height: 100%;
+    background-color: blue;
+}
