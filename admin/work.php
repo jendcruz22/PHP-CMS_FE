@@ -31,6 +31,8 @@ $result = mysqli_query( $connect, $query );
 
 <h2>Manage Works</h2>
 
+<p><a href="work_add.php"><i class="fas fa-plus-square"></i> Add Work</a></p>
+
 <table>
   <tr>
     <th align="center">ID</th>
@@ -54,8 +56,6 @@ $result = mysqli_query( $connect, $query );
     </tr>
   <?php endwhile; ?>
 </table>
-
-<p><a href="work_add.php"><i class="fas fa-plus-square"></i> Add Work</a></p>
 
 
 <?php

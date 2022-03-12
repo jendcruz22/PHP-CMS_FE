@@ -32,6 +32,8 @@ $result = mysqli_query( $connect, $query );
 
 <h2>Manage Projects</h2>
 
+<p><a href="projects_add.php"><i class="fas fa-plus-square"></i> Add Projects</a></p>
+
 <table>
   <tr>
     <th align="center">ID</th>
@@ -62,9 +64,6 @@ $result = mysqli_query( $connect, $query );
     </tr>
   <?php endwhile; ?>
 </table>
-
-<p><a href="projects_add.php"><i class="fas fa-plus-square"></i> Add Projects</a></p>
-
 
 <?php
 

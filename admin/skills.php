@@ -32,6 +32,8 @@ $result = mysqli_query( $connect, $query );
 
 <h2>Manage Skills</h2>
 
+<p><a href="skills_add.php"><i class="fas fa-plus-square"></i> Add Skill</a></p>
+
 <table>
   <tr>
     <th align="center">ID</th>
@@ -52,9 +54,6 @@ $result = mysqli_query( $connect, $query );
     </tr>
   <?php endwhile; ?>
 </table>
-
-<p><a href="skills_add.php"><i class="fas fa-plus-square"></i> Add Skill</a></p>
-
 
 <?php
 

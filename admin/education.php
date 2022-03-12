@@ -31,6 +31,8 @@ $result = mysqli_query( $connect, $query );
 
 <h2>Manage Educations</h2>
 
+<p><a href="education_add.php"><i class="fas fa-plus-square"></i> Add Education</a></p>
+
 <table>
   <tr>
     <th align="center">ID</th>
@@ -56,9 +58,6 @@ $result = mysqli_query( $connect, $query );
     </tr>
   <?php endwhile; ?>
 </table>
-
-<p><a href="education_add.php"><i class="fas fa-plus-square"></i> Add Education</a></p>
-
 
 <?php
 

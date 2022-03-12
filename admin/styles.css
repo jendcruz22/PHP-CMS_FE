@@ -86,10 +86,10 @@ input[type=submit] {
 
 #dashboard li a:link,
 #dashboard li a:visited,
-#dashboard li a:active,
-#dashboard li a:hover {
+#dashboard li a:active {
   color: #fff;
 }
+
 #dashboard li {
   background-color: #eb741d;
   display: inline-block;
@@ -102,6 +102,13 @@ input[type=submit] {
   list-style-position: inside;
   border: none;
 }
+
 #dashboard i {
   margin-bottom: 5px;
+}
+
+#dashboard li:hover {
+  background: white;
+  border: 1px solid #FF8500;
+  color: #FF8500;
 }

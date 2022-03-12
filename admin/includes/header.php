@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
   
-  <title>Website Admin</title>
+  <title>Jenny's Portfolio Administration</title>
   
   <link href="styles.css" type="text/css" rel="stylesheet">
   
@@ -14,7 +14,7 @@
 </head>
 <body>
   
-  <h1>Website Admin</h1>
+  <h1>Jenny's Portfolio Administration</h1>
   
   <?php if(isset($_SESSION['id'])): ?>
 
